@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/harishportfolio/static/css/main.3c5920c1.css",
-    "main.js": "/harishportfolio/static/js/main.dc57f03c.js",
+    "main.css": "/harishportfolio/static/css/main.b0b6e406.css",
+    "main.js": "/harishportfolio/static/js/main.62e8ea7c.js",
     "static/js/488.e930bfaf.chunk.js": "/harishportfolio/static/js/488.e930bfaf.chunk.js",
     "static/media/annapurnafarms.png": "/harishportfolio/static/media/annapurnafarms.db33c42b662b051961da.png",
     "static/media/banner.png": "/harishportfolio/static/media/banner.2710476b3b787d0ba0dc.png",
@@ -17,12 +17,12 @@
     "static/media/fa-v4compatibility.ttf": "/harishportfolio/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/harishportfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/harishportfolio/index.html",
-    "main.3c5920c1.css.map": "/harishportfolio/static/css/main.3c5920c1.css.map",
-    "main.dc57f03c.js.map": "/harishportfolio/static/js/main.dc57f03c.js.map",
+    "main.b0b6e406.css.map": "/harishportfolio/static/css/main.b0b6e406.css.map",
+    "main.62e8ea7c.js.map": "/harishportfolio/static/js/main.62e8ea7c.js.map",
     "488.e930bfaf.chunk.js.map": "/harishportfolio/static/js/488.e930bfaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c5920c1.css",
-    "static/js/main.dc57f03c.js"
+    "static/css/main.b0b6e406.css",
+    "static/js/main.62e8ea7c.js"
   ]
 }
