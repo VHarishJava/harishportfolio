@@ -17,8 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* max-width: 1000px; */
-  /* width: 100%; */
   text-align: left;
   gap: 140px;
   padding: 50px 10%;
@@ -35,8 +33,8 @@
   width: 300px;
   height: 300px;
   object-fit: cover;
-  /* border-radius: 50%;  */
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  */
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Animated Overlay */
@@ -51,14 +49,9 @@
   z-index: 1;
 }
 
-.highlight {
-  color: #ffcc00;
-}
-
 /* ======== Content Styling ======== */
 .intro-content {
   max-width: 800px;
-  /* flex: 2; */
   padding: 20px;
   border-radius: 10px;
   position: relative;
@@ -74,8 +67,6 @@
 }
 
 .tagline {
-  margin: 10px 0;
-  line-height: 1.5;
   font-size: 1.2rem;
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -90,8 +81,6 @@
   color: #ffffff;
   animation: fadeIn 2s ease-in-out;
 }
-
-
 
 /* ======== CTA Button ======== */
 .cta-button {
@@ -114,51 +103,6 @@
 }
 
 /* ======== Animations ======== */
-
-/* Background Gradient Animation */
-@keyframes backgroundFade {
-  0% {
-    background: linear-gradient(135deg, #20479b, #2a7cca, #39b1ff);
-  }
-
-  50% {
-    background: linear-gradient(135deg, #39b1ff, #2a7cca, #20479b);
-  }
-
-  100% {
-    background: linear-gradient(135deg, #20479b, #2a7cca, #39b1ff);
-  }
-}
-
-/* @keyframes backgroundFade {
-  0% {
-    background: linear-gradient(135deg, #0d0d0d, #1f1f1f, #3a3a3a, #0052cc);
-  }
-
-  50% {
-    background: linear-gradient(135deg, #0052cc, #3a3a3a, #1f1f1f, #0d0d0d);
-  }
-
-  100% {
-    background: linear-gradient(135deg, #0d0d0d, #1f1f1f, #3a3a3a, #0052cc);
-  }
-} */
-
-
-
-
-/* Text Glow Animation */
-@keyframes glowText {
-  from {
-    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
-  }
-
-  to {
-    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
-  }
-}
-
-/* Fade In & Up Animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -171,107 +115,63 @@
   }
 }
 
-/* General Fade In */
-@keyframes fadeIn {
+@keyframes glowText {
   from {
-    opacity: 0;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
   }
 
   to {
-    opacity: 1;
+    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
   }
 }
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.intro-image .profile-img {
-  animation: slideIn 1.5s ease-out;
-}
-
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-.cta-button {
-  animation: bounce 1s infinite;
-}
-
 
 /* ======== Responsive Design ======== */
+@media screen and (max-width: 1024px) {
 
-/* 📱 Mobile Devices (Up to 480px) */
-@media screen and (max-width: 480px) {
-  .intro {
-    height: 85vh;
-    /* Adjusted for smaller screen height */
-    padding: 20px;
-    /* Slightly reduced padding */
-  }
-
+  /* Tablet Styles */
   .intro-container {
-    flex-direction: column;
-    gap: 20px;
-    /* Reduced gap between profile and content */
-    text-align: center;
-  }
-
-  .intro-image .profile-img {
-    width: 200px;
-    height: 200px;
-    /* Smaller profile image */
+    gap: 50px;
   }
 
   .name {
-    font-size: 2rem;
-    /* Adjust name font size */
+    font-size: 2.8rem;
   }
 
-  .tagline,
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
   .role {
-    font-size: 1rem;
-    /* Adjust tagline font size */
+    font-size: 1.8rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
   }
 
   .cta-button {
-    font-size: 1rem;
-    padding: 10px 20px;
+    font-size: 1.1rem;
+    padding: 10px 25px;
   }
 }
 
-/* 📱 Small Tablets (481px - 768px) */
 @media screen and (max-width: 768px) {
+
+  /* Small Tablet / Large Mobile Styles */
   .intro-container {
     flex-direction: column;
     text-align: center;
     gap: 30px;
-    /* Moderate gap between profile and content */
   }
 
-  .intro-image .profile-img {
+  .profile-img {
     width: 200px;
     height: 200px;
   }
 
   .name {
     font-size: 2.5rem;
-    /* Adjust name font size */
   }
 
   .tagline {
@@ -284,79 +184,34 @@
 
   .cta-button {
     font-size: 1.1rem;
-    padding: 12px 25px;
+    padding: 10px 25px;
   }
 }
 
-/* 💻 Medium Screens (769px - 1024px) */
-@media screen and (max-width: 1024px) {
-  .intro-container {
-    flex-direction: row;
-    /* Maintain row layout for medium screens */
-    gap: 60px;
-    /* Adjust gap for better layout */
-  }
+@media screen and (max-width: 480px) {
 
-  .intro-image .profile-img {
-    width: 250px;
-    height: 250px;
-  }
-
-  .name {
-    font-size: 2.8rem;
-    /* Adjust name font size */
-  }
-
-  .tagline {
-    font-size: 1.3rem;
-  }
-
-  .role {
-    font-size: 1.7rem;
-  }
-
-  .cta-button {
-    font-size: 1.2rem;
-    padding: 15px 30px;
-  }
-}
-
-/* 🖥 Large Screens (1025px and above) */
-@media screen and (min-width: 1025px) {
+  /* Mobile Styles */
   .intro {
-    height: 100vh;
-    /* Full screen for large devices */
-    padding: 40px;
-    /* Maintain padding */
+    height: 85vh;
+    padding: 20px;
   }
 
-  .intro-container {
-    flex-direction: row;
-    gap: 140px;
-    /* Maintain larger gap for large screens */
-  }
-
-  .intro-image .profile-img {
-    width: 300px;
-    height: 300px;
-    /* Larger profile image */
+  .profile-img {
+    width: 180px;
+    height: 180px;
   }
 
   .name {
-    font-size: 3rem;
-    /* Maintain large name font size */
-  }
-
-  .tagline {
-    font-size: 1.5rem;
-  }
-
-  .role {
     font-size: 2rem;
   }
 
+  .tagline,
+  .role {
+    font-size: 1rem;
+  }
+
   .cta-button {
-    font-size: 1.0rem;
-    padding: 13px 25px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 }

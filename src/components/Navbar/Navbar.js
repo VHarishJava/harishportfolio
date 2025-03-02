@@ -26,9 +26,11 @@ const Navbar = () => {
     <nav className={`navbar ${navClass}`}>
       <div className="navbar-container">
         <div className="nav-logo">Vilasagaram Harish</div>
+        {/* Toggle icon */}
         <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <FiX /> : <FiMenu />}
         </div>
+        {/* Navigation links */}
         <ul className={menuOpen ? "nav-links active" : "nav-links"}>
           <li><Link to="intro" smooth={true} onClick={() => setMenuOpen(false)}>Home</Link></li>
           <li><Link to="about" smooth={true} onClick={() => setMenuOpen(false)}>About</Link></li>

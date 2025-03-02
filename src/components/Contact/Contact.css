@@ -1,43 +1,47 @@
 /* Contact Section */
 .contact {
-  padding: 60px 20px;
-  background: #e5ecfb; /* Light Blue Background */
-  color: #1e293b; /* Dark Blue Text */
+  padding: 60px 5%;
+  background: #e5ecfb;
+  /* Light Blue Background */
+  color: #1e293b;
+  /* Dark Blue Text */
   text-align: center;
 }
 
+/* Container */
 .container {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 0px; */
   justify-content: center;
-  max-width: 900px;
+  max-width: 1200px;
+  /* Adjusted for larger screens */
   margin: auto;
   padding: 30px;
   border-radius: 15px;
-  background: #ffffff; /* White Background for the Box */
-  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.5); /* Soft White Shadow */
+  background: #ffffff;
+  /* White Background for the Box */
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  /* Slightly Darker Shadow */
   backdrop-filter: blur(10px);
 }
 
 /* Left - Contact Info */
 .contact-info {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
   text-align: left;
-  margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
 .contact-info h2 {
   font-size: 2rem;
-  color: #20479b; /* Deep Blue */
+  color: #20479b;
   margin-bottom: 12px;
 }
 
 .contact-info p {
   font-size: 1.1rem;
-  color: #475569; /* Dark Gray */
+  color: #475569;
 }
 
 .contact-item {
@@ -46,12 +50,12 @@
   gap: 10px;
   font-size: 1.2rem;
   margin: 12px 0;
-  color: #334155; /* Slightly Darker Gray */
+  color: #334155;
 }
 
 .contact-item svg {
   font-size: 1.3rem;
-  color: #20479b; /* Blue */
+  color: #20479b;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -62,13 +66,12 @@
 /* Right - Contact Form */
 .contact-form {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center inputs */
-  margin: 0; 
-  padding: 0; 
+  align-items: center;
+  padding: 20px;
 }
 
 /* Inputs */
@@ -76,12 +79,12 @@
 .contact-form select,
 .contact-form textarea {
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   padding: 12px;
   margin: 10px 0;
   border: none;
   border-radius: 8px;
-  background: rgba(32, 71, 155, 0.1); /* Light Blue Transparent */
+  background: rgba(32, 71, 155, 0.1);
   color: #1e293b;
   font-size: 1rem;
   transition: border 0.3s ease-in-out;
@@ -94,12 +97,12 @@
 .contact-form select:focus,
 .contact-form textarea:focus {
   outline: none;
-  border: 2px solid #20479b; /* Deep Blue Border */
+  border: 2px solid #20479b;
 }
 
 /* Button */
 .contact-form button {
-  background: linear-gradient(90deg, #20479b, #2a7cca); /* Blue Gradient */
+  background: linear-gradient(90deg, #20479b, #2a7cca);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -107,41 +110,73 @@
   border-radius: 8px;
   font-size: 1.1rem;
   transition: transform 0.3s ease-in-out;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
-  display: block;
 }
 
 .contact-form button:hover {
   transform: scale(1.05);
-  background: linear-gradient(90deg, #1a3a77, #2461a2); /* Darker Blue */
+  background: linear-gradient(90deg, #1a3a77, #2461a2);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    padding: 20px;
   }
 
   .contact-info,
   .contact-form {
     text-align: center;
+    width: 100%;
   }
 
   .contact-item {
     justify-content: center;
   }
+}
 
+@media (max-width: 768px) {
+  .contact {
+    padding: 50px 5%;
+  }
+
+  .contact-info,
   .contact-form {
-    width: 100%;
+    width: 90%;
+    padding: 10px;
   }
 
   .contact-form input,
   .contact-form select,
   .contact-form textarea,
   .contact-form button {
-    max-width: 100%; /* Full width on mobile */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 40px 5%;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info p,
+  .contact-item {
+    font-size: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
   }
 }

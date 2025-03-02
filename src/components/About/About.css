@@ -1,7 +1,7 @@
 /* ======== About Section Styling ======== */
 .about {
   padding: 50px 10%;
-  background-color: #e5ecfb; /* Updated Background Color */
+  background-color: #e5ecfb;
 }
 
 .about-container {
@@ -9,32 +9,31 @@
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap; /* Ensure flex items wrap on smaller screens */
+  flex-wrap: wrap;
   margin: 0 auto;
+  text-align: center;
+  /* Ensure text is centered on small screens */
 }
 
-/* About Image Styling */
 .about-image {
-  position: relative; /* To position the gradient overlay */
-  overflow: hidden; /* Prevent image from overflowing */
-  border-radius: 8px; /* Optional: smooth corners */
-  transition: transform 0.3s ease; /* Smooth zoom effect */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  max-width: 100%;
 }
 
-/* Image Styling */
 .about-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image maintains aspect ratio */
-  transition: transform 0.3s ease; /* Image zoom effect */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-/* Hover Effect for Image */
 .about-image:hover .about-img {
-  transform: scale(1.1); /* Zoom in effect */
+  transform: scale(1.1);
 }
 
-/* Gradient Hover Effect */
 .about-image:hover::before {
   content: "";
   position: absolute;
@@ -44,17 +43,17 @@
   height: 100%;
   background: linear-gradient(45deg, rgba(58, 123, 213, 0.6), rgba(99, 45, 175, 0.6));
   transition: background 0.3s ease;
-  z-index: 1; /* Place the gradient over the image */
+  z-index: 1;
 }
 
 .about-content {
   flex: 2;
-  max-width: 600px; /* Set max width for the content */
+  max-width: 600px;
 }
 
 .about-heading {
   font-size: 2.5rem;
-  color: #2a3b5c; /* Adjusted for contrast */
+  color: #2a3b5c;
   margin-bottom: 20px;
 }
 
@@ -64,7 +63,6 @@
   line-height: 1.5;
 }
 
-/* Button Section */
 .button-container {
   display: flex;
   justify-content: start;
@@ -72,9 +70,8 @@
   margin-top: 20px;
 }
 
-/* Resume button styling */
 .resume-btn {
-  background: linear-gradient(45deg, #5a8fdb, #9b59b6); /* Gradient blue & purple */
+  background: linear-gradient(45deg, #5a8fdb, #9b59b6);
   color: white;
   padding: 14px 24px;
   font-size: 16px;
@@ -94,22 +91,19 @@
   transition: transform 0.3s ease;
 }
 
-/* Hover animation */
 .resume-btn:hover {
-  background: linear-gradient(45deg, #3d6fb7, #8e47a3); 
-  transform: scale(1.1); 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+  background: linear-gradient(45deg, #3d6fb7, #8e47a3);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Icon hover effect */
 .resume-btn:hover i {
-  transform: rotate(360deg); 
+  transform: rotate(360deg);
 }
 
-/* Button active effect */
 .resume-btn:active {
-  transform: scale(1); 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .resume-btn:disabled {
@@ -122,79 +116,92 @@
 /* 📱 Mobile Devices (Up to 480px) */
 @media screen and (max-width: 480px) {
   .about-container {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    gap: 20px;
   }
 
   .about-img {
-      max-width: 200px;
+    max-width: 90%;
+    margin: 0 auto;
+    /* Center image */
   }
 
   .about-heading {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .about-text {
-      font-size: 1rem;
+    font-size: 1rem;
+  }
+
+  .button-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .resume-btn {
+    width: 100%;
+    max-width: 250px;
+    justify-content: center;
   }
 }
 
 /* 📱 Small Tablets (481px - 768px) */
 @media screen and (max-width: 768px) {
   .about-container {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .about-img {
-      max-width: 250px;
+    max-width: 90%;
   }
 
   .about-heading {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
 
   .about-text {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 }
 
 /* 💻 Medium Screens (769px - 1024px) */
 @media screen and (max-width: 1024px) {
   .about-container {
-      flex-direction: row;
-      gap: 40px;
+    flex-direction: row;
+    gap: 40px;
   }
 
   .about-img {
-      max-width: 280px;
+    max-width: 280px;
   }
 
   .about-heading {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .about-text {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 
 /* 🖥 Large Screens (1025px and above) */
 @media screen and (min-width: 1025px) {
   .about-container {
-      flex-direction: row;
-      gap: 60px;
+    flex-direction: row;
+    gap: 60px;
   }
 
   .about-img {
-      max-width: 300px;
+    max-width: 300px;
   }
 
   .about-heading {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   .about-text {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 }

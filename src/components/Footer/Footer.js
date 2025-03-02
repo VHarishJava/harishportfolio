@@ -9,9 +9,9 @@ const Footer = () => {
         <p className="designer">
           Designed & Developed by <span>Vilasagaram Harish</span>
         </p>
-        <p className="copyright">
+        {/* <p className="copyright">
           Copyright © 2025 <span>IB</span>
-        </p>
+        </p> */}
         <div className="social-links">
           {/* <a href="https://github.com/Ibrahim2191" target="_blank" rel="noopener noreferrer">
             <Github className="icon" />

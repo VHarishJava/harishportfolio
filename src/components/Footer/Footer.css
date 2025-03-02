@@ -1,88 +1,126 @@
 /* Footer Container */
 .footer {
-    background: #121212;
-    color: #ffffff;
-    text-align: center;
-    padding: 25px 15px;
-    font-size: 14px;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  /* Footer Content Layout */
+  background: #121212;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Footer Content Layout */
+.footer-container {
+  max-width: 1235px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Developer Credit */
+.designer {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.designer span {
+  color: #39b1ff;
+  font-weight: 600;
+}
+
+/* Copyright */
+.copyright {
+  font-size: 14px;
+  color: #888;
+}
+
+.copyright span {
+  color: #df1e1f;
+  font-weight: 600;
+}
+
+/* Social Media Icons */
+.social-links {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  /* Center align icons by default */
+}
+
+.icon {
+  color: #bbb;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Animation */
+.social-links a:hover .icon {
+  color: #39b1ff;
+  transform: scale(1.2);
+}
+
+/* Large Screen (Desktop) */
+@media (min-width: 1024px) {
   .footer-container {
-    max-width: 1235px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
   }
-  
-  /* Developer Credit */
-  .designer {
-    font-size: 16px;
-    font-weight: 500;
+
+  .footer {
+    padding: 30px 60px;
+    /* Add more padding for larger screens */
   }
-  
-  .designer span {
-    color: #39b1ff;
-    font-weight: 600;
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
   }
-  
-  /* Copyright */
-  .copyright {
-    font-size: 14px;
-    color: #888;
+
+  .footer {
+    padding: 25px 30px;
+    /* Adjust padding for tablets */
   }
-  
-  .copyright span {
-    color: #df1e1f;
-    font-weight: 600;
-  }
-  
-  /* Social Media Icons */
-  .social-links {
-    display: flex;
-    gap: 18px;
-  }
-  
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
   .icon {
-    color: #bbb;
-    width: 28px;
-    height: 28px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    width: 24px;
+    height: 24px;
   }
-  
-  /* Hover Animation */
-  .social-links a:hover .icon {
-    color: #39b1ff;
-    transform: scale(1.2);
+
+  .social-links {
+    gap: 14px;
+    justify-content: center;
+    /* Ensure social icons are centered */
   }
-  
-  /* Responsive Design */
-  @media (min-width: 600px) {
-    .footer-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
+
+  .footer {
+    font-size: 12px;
+    /* Slightly smaller font size for mobile */
+    padding: 20px 10px;
+    /* Adjust padding for mobile screens */
   }
-  
-  /* Tablet View */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      gap: 15px;
-    }
+}
+
+/* Extra small devices (for very small mobile screens) */
+@media (max-width: 360px) {
+  .footer {
+    font-size: 12px;
+    /* Reduce font size further for smaller screens */
+    padding: 15px 10px;
+    /* Reduce padding on very small screens */
   }
-  
-  /* Mobile View */
-  @media (max-width: 480px) {
-    .icon {
-      width: 24px;
-      height: 24px;
-    }
-    .social-links {
-      gap: 14px;
-    }
+
+  .designer,
+  .copyright {
+    font-size: 12px;
+    /* Adjust text size for small screens */
   }
-  
+}
