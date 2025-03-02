@@ -1,0 +1,200 @@
+/* ======== About Section Styling ======== */
+.about {
+  padding: 50px 10%;
+  background-color: #e5ecfb; /* Updated Background Color */
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Ensure flex items wrap on smaller screens */
+  margin: 0 auto;
+}
+
+/* About Image Styling */
+.about-image {
+  position: relative; /* To position the gradient overlay */
+  overflow: hidden; /* Prevent image from overflowing */
+  border-radius: 8px; /* Optional: smooth corners */
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* Image Styling */
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image maintains aspect ratio */
+  transition: transform 0.3s ease; /* Image zoom effect */
+}
+
+/* Hover Effect for Image */
+.about-image:hover .about-img {
+  transform: scale(1.1); /* Zoom in effect */
+}
+
+/* Gradient Hover Effect */
+.about-image:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(58, 123, 213, 0.6), rgba(99, 45, 175, 0.6));
+  transition: background 0.3s ease;
+  z-index: 1; /* Place the gradient over the image */
+}
+
+.about-content {
+  flex: 2;
+  max-width: 600px; /* Set max width for the content */
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  color: #2a3b5c; /* Adjusted for contrast */
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Button Section */
+.button-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Resume button styling */
+.resume-btn {
+  background: linear-gradient(45deg, #5a8fdb, #9b59b6); /* Gradient blue & purple */
+  color: white;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.resume-btn i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover animation */
+.resume-btn:hover {
+  background: linear-gradient(45deg, #3d6fb7, #8e47a3); 
+  transform: scale(1.1); 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+}
+
+/* Icon hover effect */
+.resume-btn:hover i {
+  transform: rotate(360deg); 
+}
+
+/* Button active effect */
+.resume-btn:active {
+  transform: scale(1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.resume-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* ======== Responsive Design ======== */
+
+/* 📱 Mobile Devices (Up to 480px) */
+@media screen and (max-width: 480px) {
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-img {
+      max-width: 200px;
+  }
+
+  .about-heading {
+      font-size: 2rem;
+  }
+
+  .about-text {
+      font-size: 1rem;
+  }
+}
+
+/* 📱 Small Tablets (481px - 768px) */
+@media screen and (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-img {
+      max-width: 250px;
+  }
+
+  .about-heading {
+      font-size: 2.2rem;
+  }
+
+  .about-text {
+      font-size: 1.1rem;
+  }
+}
+
+/* 💻 Medium Screens (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .about-container {
+      flex-direction: row;
+      gap: 40px;
+  }
+
+  .about-img {
+      max-width: 280px;
+  }
+
+  .about-heading {
+      font-size: 2.5rem;
+  }
+
+  .about-text {
+      font-size: 1.2rem;
+  }
+}
+
+/* 🖥 Large Screens (1025px and above) */
+@media screen and (min-width: 1025px) {
+  .about-container {
+      flex-direction: row;
+      gap: 60px;
+  }
+
+  .about-img {
+      max-width: 300px;
+  }
+
+  .about-heading {
+      font-size: 3rem;
+  }
+
+  .about-text {
+      font-size: 1.3rem;
+  }
+}

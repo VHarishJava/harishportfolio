@@ -1,0 +1,362 @@
+/* ======== Intro Section ======== */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #20479b 0%, #2a7cca 50%, #39b1ff 100%);
+  color: #ffffff;
+  animation: backgroundFade 10s infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 1000px; */
+  /* width: 100%; */
+  text-align: left;
+  gap: 140px;
+  padding: 50px 10%;
+}
+
+/* ====== Profile Image Styling ====== */
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  /* border-radius: 50%;  */
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  */
+}
+
+/* Animated Overlay */
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.highlight {
+  color: #ffcc00;
+}
+
+/* ======== Content Styling ======== */
+.intro-content {
+  max-width: 800px;
+  /* flex: 2; */
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.name {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffcc00;
+  animation: glowText 2s infinite alternate;
+}
+
+.tagline {
+  margin: 10px 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  opacity: 0.9;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.role {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #ffffff;
+  animation: fadeIn 2s ease-in-out;
+}
+
+
+
+/* ======== CTA Button ======== */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(45deg, #ff5722, #e91e63);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 87, 34, 0.5);
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(45deg, #e91e63, #ff5722);
+  box-shadow: 0 6px 20px rgba(255, 87, 34, 0.7);
+}
+
+/* ======== Animations ======== */
+
+/* Background Gradient Animation */
+@keyframes backgroundFade {
+  0% {
+    background: linear-gradient(135deg, #20479b, #2a7cca, #39b1ff);
+  }
+
+  50% {
+    background: linear-gradient(135deg, #39b1ff, #2a7cca, #20479b);
+  }
+
+  100% {
+    background: linear-gradient(135deg, #20479b, #2a7cca, #39b1ff);
+  }
+}
+
+/* @keyframes backgroundFade {
+  0% {
+    background: linear-gradient(135deg, #0d0d0d, #1f1f1f, #3a3a3a, #0052cc);
+  }
+
+  50% {
+    background: linear-gradient(135deg, #0052cc, #3a3a3a, #1f1f1f, #0d0d0d);
+  }
+
+  100% {
+    background: linear-gradient(135deg, #0d0d0d, #1f1f1f, #3a3a3a, #0052cc);
+  }
+} */
+
+
+
+
+/* Text Glow Animation */
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+  }
+
+  to {
+    text-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00;
+  }
+}
+
+/* Fade In & Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.intro-image .profile-img {
+  animation: slideIn 1.5s ease-out;
+}
+
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cta-button {
+  animation: bounce 1s infinite;
+}
+
+
+/* ======== Responsive Design ======== */
+
+/* 📱 Mobile Devices (Up to 480px) */
+@media screen and (max-width: 480px) {
+  .intro {
+    height: 85vh;
+    /* Adjusted for smaller screen height */
+    padding: 20px;
+    /* Slightly reduced padding */
+  }
+
+  .intro-container {
+    flex-direction: column;
+    gap: 20px;
+    /* Reduced gap between profile and content */
+    text-align: center;
+  }
+
+  .intro-image .profile-img {
+    width: 200px;
+    height: 200px;
+    /* Smaller profile image */
+  }
+
+  .name {
+    font-size: 2rem;
+    /* Adjust name font size */
+  }
+
+  .tagline,
+  .role {
+    font-size: 1rem;
+    /* Adjust tagline font size */
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* 📱 Small Tablets (481px - 768px) */
+@media screen and (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    /* Moderate gap between profile and content */
+  }
+
+  .intro-image .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    /* Adjust name font size */
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+  }
+}
+
+/* 💻 Medium Screens (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .intro-container {
+    flex-direction: row;
+    /* Maintain row layout for medium screens */
+    gap: 60px;
+    /* Adjust gap for better layout */
+  }
+
+  .intro-image .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .name {
+    font-size: 2.8rem;
+    /* Adjust name font size */
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+  }
+
+  .role {
+    font-size: 1.7rem;
+  }
+
+  .cta-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
+}
+
+/* 🖥 Large Screens (1025px and above) */
+@media screen and (min-width: 1025px) {
+  .intro {
+    height: 100vh;
+    /* Full screen for large devices */
+    padding: 40px;
+    /* Maintain padding */
+  }
+
+  .intro-container {
+    flex-direction: row;
+    gap: 140px;
+    /* Maintain larger gap for large screens */
+  }
+
+  .intro-image .profile-img {
+    width: 300px;
+    height: 300px;
+    /* Larger profile image */
+  }
+
+  .name {
+    font-size: 3rem;
+    /* Maintain large name font size */
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+  }
+
+  .role {
+    font-size: 2rem;
+  }
+
+  .cta-button {
+    font-size: 1.0rem;
+    padding: 13px 25px;
+  }
+}
