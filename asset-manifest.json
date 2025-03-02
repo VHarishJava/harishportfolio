@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/harishportfolio/static/css/main.3c5920c1.css",
+    "main.js": "/harishportfolio/static/js/main.dc57f03c.js",
+    "static/js/488.e930bfaf.chunk.js": "/harishportfolio/static/js/488.e930bfaf.chunk.js",
+    "static/media/annapurnafarms.png": "/harishportfolio/static/media/annapurnafarms.db33c42b662b051961da.png",
+    "static/media/banner.png": "/harishportfolio/static/media/banner.2710476b3b787d0ba0dc.png",
+    "static/media/fa-solid-900.ttf": "/harishportfolio/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/bannerjavadeveloper.png": "/harishportfolio/static/media/bannerjavadeveloper.1895445e67b243ed09cc.png",
+    "static/media/fa-brands-400.ttf": "/harishportfolio/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/harishportfolio/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/Java Full Stack Certificate .jpg": "/harishportfolio/static/media/Java Full Stack Certificate .11a066c72218f4328bba.jpg",
+    "static/media/fa-brands-400.woff2": "/harishportfolio/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/harishportfolio/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/javaScriptandCss.jpg": "/harishportfolio/static/media/javaScriptandCss.8ca11ec78ab6d3edf901.jpg",
+    "static/media/fa-regular-400.woff2": "/harishportfolio/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/harishportfolio/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/harishportfolio/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/harishportfolio/index.html",
+    "main.3c5920c1.css.map": "/harishportfolio/static/css/main.3c5920c1.css.map",
+    "main.dc57f03c.js.map": "/harishportfolio/static/js/main.dc57f03c.js.map",
+    "488.e930bfaf.chunk.js.map": "/harishportfolio/static/js/488.e930bfaf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c5920c1.css",
+    "static/js/main.dc57f03c.js"
+  ]
+}
